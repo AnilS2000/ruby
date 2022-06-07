@@ -1,0 +1,7 @@
+require 'net/http'
+def apiCall (mainUrl)
+    url=URI.parse(mainUrl)
+    response= Net::HTTP.get(url)
+    return url
+end
+puts apiCall('https://www.google.com/')
